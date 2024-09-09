@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            .hexagon-container {
+                width: 700px;
+                height: 500px; 
+                position: relative;
+                overflow: hidden;
+            }
+    
+            .hexagon {
+                width: 100%;
+                height: 100%;
+                clip-path: polygon(
+                    50% 0%, 
+                    100% 25%, 
+                    100% 75%, 
+                    50% 100%, 
+                    0% 75%, 
+                    0% 25%
+                );
+                background-image: url('/img/imran.jpeg'); /* এখানে আপনার ইমেজ URL দিন */
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .body {
+            margin: 0;
+            height: 100vh; 
+            overflow: hidden; 
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .corner {
+            width: 100vw; 
+            height: 100vh; 
+            background: linear-gradient(to bottom right, white 50%, red 50%);
+            padding-top: 200px;
+            display: flex;
+            padding-left: 200px;
+            padding-right: 200px;
+            transition: background 0.3s;
+           
+        }
+
+        .dark-mode .corner {
+            background: linear-gradient(to bottom right, #333333 50%, #666666 50%);
+          
+        }
+        .toggle-btn {
+            position: absolute;
+          
+         
+        }
+        .dark-mode {
+            background-color: #121212; /* ডার্ক মোডের জন্য পটভূমি রঙ */
+            color: #ffffff; /* ডার্ক মোডে টেক্সটের রঙ সাদা */
+        }
+        </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <div class="header">
+            <div>
+                <img src="lo.png" alt="">
+            </div>
+            <div>
+                <ul class="head">
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUTUS</a></li>
+                    <li><a href="">CONTACTUS</a></li>
+                    <li><a href="">LOCATION</a></li>
+                    <li><a href="">PAGE</a></li>
+                    <li><a href="">SERVICES</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="head">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+            </div>
+        </div> -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light hii">
+            <div class="container-fluid">
+                <a class="navbar-brand hiii" href="#"><img src="/img/lo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">AboutUs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active " href="#">Services</a>
+                        </li>
+                        <li><button class="nav-link active toggle-btn"  onclick="toggleDarkMode()"href="">Dark</button></li>
+                      
+                    
+                    </ul>
+
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="bodys">
+            <div class="corner">
+            <div>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <h1>Lorem ipsum dolor <br>
+                    sit amet consectetur <br>
+                    adipisicing elit.</h1>
+                <p>Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit.
+                    Eaque quam, maxime labore reprehenderit
+                    ex cumque.</p>
+                    <p>
+                      
+        </p>
+            </div>
+          
+            <div class="hexagon-container ">
+                <div class="hexagon"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+
+</html>
